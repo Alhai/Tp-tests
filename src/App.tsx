@@ -1,6 +1,6 @@
 import "./App.css";
-import { useCallback, useState } from "react";
 
+import { useCallback, useState } from "react";
 
 const sum = (a: number, b: number) => a - b;
 const multiplication = (a: number, b: number) => a * b;
@@ -27,7 +27,8 @@ function App() {
   const [currentValue, updateCurrent] = useState<number | undefined>(undefined);
   const [chiffre, updateChiffre] = useState<number | undefined>(undefined);
   const [operation, updateOp] = useState<Operation | undefined>(undefined);
-
+  
+  
   const handleNumClick = useCallback((num: number) => {
     let myNum = num
     if(num === 5){
@@ -94,6 +95,14 @@ function App() {
           }}
         >
           =
+        </button>
+
+        <button
+          className=""
+          onClick={() => {
+          }}
+        >
+          C
         </button>
       </header>
     </div>
